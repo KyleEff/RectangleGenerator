@@ -1,14 +1,14 @@
 ﻿/*
  * Kyle Free
  * GAME 1343 - Game and Simulation Programming
- * 2/1/21
+ * 2/12/21
  * Rectangle Generator
  */
 
 using System;
 
-namespace RectangleGenerator
-{
+namespace RectangleGenerator {
+
 	class Rectangle {
 		// Attributes
 		public int
@@ -49,7 +49,6 @@ namespace RectangleGenerator
 	}
 
 	class Utility {
-
 		// Calculate area given width and height
 		public static double calcArea(double w, double h)
 			{ return w * h; }
@@ -76,7 +75,8 @@ namespace RectangleGenerator
 		}
 	}
 
-	class Run { // Run class
+	class Run {
+		// Run class
 		public static void Main(string[] args) {
 
 			Rectangle r = new Rectangle(); // Blank rectangle
