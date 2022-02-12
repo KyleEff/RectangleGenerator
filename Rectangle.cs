@@ -11,7 +11,7 @@ namespace RectangleGenerator
 {
 	class Rectangle {
 		// Attributes
-		public double
+		public int
 			width,
 			height,
 			area,
@@ -20,10 +20,10 @@ namespace RectangleGenerator
 		// Constructors
 		public Rectangle() {
 			// Default Constructor
-			width = 0.0;
-			height = 0.0;
-			area = 0.0;
-			perimeter = 0.0;
+			width = 0;
+			height = 0;
+			area = 0;
+			perimeter = 0;
 		}
 
 		public Rectangle(int min, int max) {
@@ -67,7 +67,7 @@ namespace RectangleGenerator
 			{ r.perimeter = (r.width * 2) + (r.height * 2); }
 
 		// Generate Rectangle given min and max ranges, then using "out" parameters to pass width and height
-		public static void makeRectangle(int min, int max, out double width, out double height) {
+		public static void makeRectangle(int min, int max, out int width, out int height) {
 
 			Rectangle r = new Rectangle(min, max); // Dummy object used to pull width and height
 
