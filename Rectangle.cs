@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * Kyle Free
+ * GAME 1343 - Game and Simulation Programming
+ * 2/1/21
+ * Rectangle Generator
+ */
+
+using System;
 
 namespace RectangleGenerator
 {
@@ -13,23 +20,23 @@ namespace RectangleGenerator
 		// Constructors
 		public Rectangle() {
 			// Default Constructor
-			width = 0;
-			height = 0;
+			width = 0.0;
+			height = 0.0;
 			area = 0.0;
 			perimeter = 0.0;
 		}
 
 		public Rectangle(int min, int max) {
 			// Specialized constructor
-			var rand = new Random();
+			var rand = new Random(); // Random Number generator
 
-			width = rand.Next(min, max);
+			width = rand.Next(min, max); // Random Number between min and max
 			height = rand.Next(min, max);
-			Utility.calcArea(this);
-			Utility.calcPerimeter(this);
+			Utility.calcArea(this); // Calculate the area of this object
+			Utility.calcPerimeter(this); // "        " perimeter "         "
 		}
 
-		// Method for display
+		// Method override for display
 		public override string ToString() {
 
 			return '\n' +
@@ -62,10 +69,10 @@ namespace RectangleGenerator
 		// Generate Rectangle given min and max ranges, then using "out" parameters to pass width and height
 		public static void makeRectangle(int min, int max, out double width, out double height) {
 
-			Rectangle r = new Rectangle(min, max);
+			Rectangle r = new Rectangle(min, max); // Dummy object used to pull width and height
 
-			width = r.width;
-			height = r.height;
+			width = r.width; // out width
+			height = r.height; // out height
 		}
 	}
 
@@ -74,11 +81,11 @@ namespace RectangleGenerator
 
 			Rectangle r = new Rectangle(); // Blank rectangle
 
-			Utility.makeRectangle(10, 100, out r.width, out r.height);
-			Utility.calcArea(r);
-			Utility.calcPerimeter(r);
+			Utility.makeRectangle(10, 100, out r.width, out r.height); // generate dimension for Rectangle r object
+			Utility.calcArea(r); // run calculation for area
+			Utility.calcPerimeter(r); // run calculation for perimeter
 
-			Console.WriteLine(r);
+			Console.WriteLine(r); // Print Rectangle object stats
 		} 
 	}
 }
